@@ -1,0 +1,32 @@
+printab (){ echo  "for(i=$1;i<=$2;i++) i;"|bc -l ;}
+
+#!power
+
+pow (){ echo  "define pw(a,n){ if(n==0) return 1; return a*pw(a,n-1);} pw($1,$2);" |bc -l ;}
+
+#!end_f
+
+#!menu/of/calcule
+
+menu(){
+echo ">>to calclater simpe use calc <expression> ex:calc 1+3"
+
+echo ">>for cos or sin or any others function use fcal *fc <exp>"
+
+echo " >>for *fc we have"
+echo "    *fc=s:sin"
+echo "    *fc=c:cos"
+echo "    *fc=e:exp"
+echo "    *fc=l:lin"
+echo "    *fc=a:atang"
+echo "    *fc=sqrt"
+
+
+echo ">>for power just write  pow <base> <power> exp : pow 3 2 = 9"
+echo ">>for factoriel or fibonnachi just fact <number> or fibo <number>"
+echo ">>to print all number bettwen a and b just write printab a b exp print 1 10"
+echo "for show menu put menu"
+echo "to exit put out"
+
+}
+#!end_menu
